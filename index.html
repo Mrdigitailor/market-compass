@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="סקירת מתחרים דיגיטלית שבועית — נוכחות ברשתות, פרסום, אתר וקצב תוכן, מול אלמה ישראל.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="מצפן תחרות · אלמה ישראל">
+<meta property="og:description" content="סקירת מתחרים דיגיטלית שבועית — נוכחות ברשתות, פרסום, אתר וקצב תוכן, מול אלמה ישראל.">
+<meta property="og:locale" content="he_IL">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+<style>html,body{margin:0;padding:0}</style>
+</head>
+<body>
+<title>מצפן תחרות אלמה ישראל</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   משפחת גופנים אחת, הרבה משקלים. הפרדה בחלל ולא בקווים.
+   צבע כמעט לא קיים — כחול אחד לפעולה, כתום אחד לצד השני.
+   ───────────────────────────────────────────────────────────── */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F5F7; --bg3:#FAFAFC;
+  --ink:#1D1D1F; --ink2:#6E6E73; --ink3:#A1A1A6;
+  --line:#D2D2D7; --lineSoft:#E8E8ED;
+  --us:#0071E3; --usInk:#0071E3; --usSoft:#EAF3FE;
+  --them:#C4551F; --themSoft:#FCF0E9;
+  --pos:#1D8A4E; --neg:#C4342A;
+  --glass:rgba(255,255,255,.82);
+  --f:"Heebo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#000000; --bg2:#141416; --bg3:#0B0B0D;
+  --ink:#F5F5F7; --ink2:#98989D; --ink3:#6E6E73;
+  --line:#38383C; --lineSoft:#2A2A2E;
+  --us:#2997FF; --usInk:#5AAEFF; --usSoft:#12233A;
+  --them:#F08A4B; --themSoft:#2A1A10;
+  --pos:#4FC57E; --neg:#FF6B5E;
+  --glass:rgba(0,0,0,.72);
+}}
+:root[data-theme="dark"]{
+  --bg:#000000; --bg2:#141416; --bg3:#0B0B0D;
+  --ink:#F5F5F7; --ink2:#98989D; --ink3:#6E6E73;
+  --line:#38383C; --lineSoft:#2A2A2E;
+  --us:#2997FF; --usInk:#5AAEFF; --usSoft:#12233A;
+  --them:#F08A4B; --themSoft:#2A1A10;
+  --pos:#4FC57E; --neg:#FF6B5E;
+  --glass:rgba(0,0,0,.72);
+}
+
+*{box-sizing:border-box}
+body{direction:rtl;margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:19px;line-height:1.5;font-weight:400;letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+button,select,input{font-family:inherit;color:inherit}
+[hidden]{display:none!important}
+a{color:var(--us);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--us);outline-offset:4px;border-radius:8px}
+
+/* מכל מרכזי אחיד — הכל מתיישר אליו */
+.mid{max-width:1000px;margin:0 auto;padding:0 26px;text-align:center}
+.narrow{max-width:660px;margin-inline:auto}
+.wide{max-width:1140px;margin:0 auto;padding:0 26px;text-align:center}
+
+/* ── טיפוגרפיה ─────────────────────────────── */
+.eyebrow{font-size:15px;font-weight:600;color:var(--ink2);letter-spacing:.005em;margin:0 0 14px}
+.eyebrow.blue{color:var(--us)}
+h1.mega{font-size:clamp(40px,7.4vw,80px);font-weight:800;line-height:1.05;
+  letter-spacing:-.032em;margin:0;text-wrap:balance}
+h2.big{font-size:clamp(30px,4.6vw,50px);font-weight:800;line-height:1.09;
+  letter-spacing:-.028em;margin:0 0 16px;text-wrap:balance}
+h3.mid-t{font-size:clamp(23px,3vw,33px);font-weight:700;line-height:1.16;
+  letter-spacing:-.022em;margin:0 0 12px;text-wrap:balance}
+.lead{font-size:clamp(18px,2.1vw,23px);font-weight:400;color:var(--ink2);
+  line-height:1.42;letter-spacing:-.012em;margin:18px auto 0;max-width:44ch}
+.body{font-size:18px;color:var(--ink2);line-height:1.55;margin:14px auto 0;max-width:56ch}
+.fine{font-size:14.5px;color:var(--ink3);line-height:1.5;margin:12px auto 0;max-width:60ch}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+/* ── מקטעים ────────────────────────────────── */
+.sect{padding:104px 0}
+.sect.tight{padding:72px 0}
+.sect.grey{background:var(--bg2)}
+.sect.first{padding-top:56px}
+
+/* ── כניסה ─────────────────────────────────── */
+.enter{min-height:100svh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:70px 26px 56px}
+.mark{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:26px}
+.mark .dot{width:9px;height:9px;border-radius:50%;background:var(--us)}
+.mark span{font-size:14px;font-weight:500;color:var(--ink2);letter-spacing:.01em}
+
+/* בורר מגזרי בסגנון iOS */
+.seg{display:inline-flex;background:var(--bg2);border-radius:999px;padding:4px;
+  margin:44px auto 0;gap:2px}
+.seg button{border:none;background:none;border-radius:999px;padding:10px 26px;
+  font-size:16px;font-weight:600;color:var(--ink2);cursor:pointer;
+  transition:color .2s,background .2s;letter-spacing:-.01em;white-space:nowrap}
+.seg button[aria-selected="true"]{background:var(--bg);color:var(--ink);
+  box-shadow:0 1px 3px rgba(0,0,0,.09)}
+:root[data-theme="dark"] .seg button[aria-selected="true"]{box-shadow:0 1px 3px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg button[aria-selected="true"]{box-shadow:0 1px 3px rgba(0,0,0,.6)}}
+
+.control{margin-top:30px;width:100%;max-width:452px;display:flex;flex-direction:column;
+  gap:12px;align-items:stretch}
+.sel-wrap{position:relative}
+select.big,input.big{width:100%;padding:17px 22px;border:1px solid var(--line);
+  border-radius:15px;background:var(--bg);font-size:18px;font-weight:500;
+  text-align:center;text-align-last:center;appearance:none;transition:border-color .2s,box-shadow .2s;
+  letter-spacing:-.012em}
+select.big:hover,input.big:hover{border-color:var(--ink3)}
+select.big:focus,input.big:focus{outline:none;border-color:var(--us);
+  box-shadow:0 0 0 4px var(--usSoft)}
+input.big{text-align:center}
+input.big::placeholder{color:var(--ink3);font-weight:400}
+
+.cta{padding:16px 34px;border:none;border-radius:999px;background:var(--us);color:#fff;
+  font-size:18px;font-weight:600;cursor:pointer;transition:transform .16s,filter .16s;
+  letter-spacing:-.012em}
+.cta:hover{filter:brightness(1.09);transform:scale(1.018)}
+.cta:active{transform:scale(.988)}
+.cta.warm{background:var(--them)}
+.cta:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+.hint{margin-top:20px;font-size:15px;color:var(--ink3);max-width:40ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:6px}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;
+  padding:7px 17px;font-size:15px;font-weight:500;color:var(--ink2);cursor:pointer;
+  transition:all .18s}
+.chip:hover{border-color:var(--them);color:var(--them)}
+
+/* קופסת הצצה — ללא מסגרת, רק רקע רך */
+.peek{margin-top:4px;background:var(--bg2);border-radius:15px;padding:20px 22px}
+.peek .own{margin:0 auto}
+.peekrow{display:flex;justify-content:center;gap:34px;margin-top:15px;flex-wrap:wrap}
+.peekrow>div{display:flex;flex-direction:column;gap:2px}
+.peekrow .k{font-size:13px;color:var(--ink3);font-weight:400}
+.peekrow b{font-size:22px;font-weight:600;letter-spacing:-.02em}
+
+/* תג בעלות */
+.own{display:inline-flex;align-items:center;gap:9px;border-radius:999px;
+  padding:8px 18px;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.own::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.own.owner{background:var(--usSoft);color:var(--pos)}
+.own.reseller{background:var(--themSoft);color:var(--them)}
+.own.group{background:var(--usSoft);color:var(--us)}
+.own.unknown{background:var(--bg2);color:var(--ink3)}
+
+/* ניווט תחתון בכניסה */
+.scrollcue{margin-top:auto;padding-top:52px;font-size:14px;color:var(--ink3)}
+
+/* ── סרגל חזרה צף ──────────────────────────── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--glass);
+  backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);
+  border-bottom:1px solid var(--lineSoft)}
+.topbar .in{max-width:1140px;margin:0 auto;padding:13px 26px;display:flex;
+  align-items:center;gap:16px}
+.back{background:none;border:none;font-size:16px;font-weight:500;color:var(--us);
+  cursor:pointer;padding:4px 0;letter-spacing:-.01em}
+.back:hover{text-decoration:underline}
+.topbar .who{font-size:15px;font-weight:600;letter-spacing:-.012em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.topbar .when{margin-inline-start:auto;font-size:13px;color:var(--ink3);white-space:nowrap}
+
+/* ── גיבור מוצר ────────────────────────────── */
+.phero{padding:76px 0 68px;text-align:center}
+.phero .av{width:104px;height:104px;border-radius:50%;margin:0 auto 26px;overflow:hidden;
+  background:var(--bg2)}
+.phero .av img{width:100%;height:100%;object-fit:cover}
+
+/* ── מספר ענק ──────────────────────────────── */
+.stat{font-size:clamp(52px,9vw,104px);font-weight:800;line-height:1;
+  letter-spacing:-.042em;font-variant-numeric:tabular-nums}
+.stat.us{color:var(--us)} .stat.them{color:var(--them)}
+.statlbl{font-size:16px;color:var(--ink2);margin-top:12px;font-weight:400}
+
+/* ── השוואה ────────────────────────────────── */
+.duel{display:grid;gap:0;max-width:820px;margin:0 auto}
+.duelrow{padding:30px 0;border-bottom:1px solid var(--lineSoft)}
+.duelrow:last-child{border-bottom:none}
+.duelrow .cap{font-size:16px;font-weight:500;color:var(--ink2);margin-bottom:16px}
+.duelrow .pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
+.duelrow .side{min-width:0}
+.duelrow .side .v{font-size:clamp(28px,5vw,46px);font-weight:700;line-height:1;
+  letter-spacing:-.032em;font-variant-numeric:tabular-nums}
+.duelrow .a .v{color:var(--us)} .duelrow .b .v{color:var(--them)}
+.duelrow .side .nm{font-size:13px;color:var(--ink3);margin-top:8px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.duelrow .side .dl{font-size:13px;margin-top:4px;color:var(--ink3);font-variant-numeric:tabular-nums}
+.duelrow .dl.up{color:var(--pos)} .duelrow .dl.down{color:var(--neg)}
+.duelrow .mid-badge{font-size:13px;font-weight:600;color:var(--ink3);white-space:nowrap;
+  background:var(--bg2);border-radius:999px;padding:6px 14px}
+.duelrow .mid-badge.us{color:var(--us)} .duelrow .mid-badge.them{color:var(--them)}
+.rail{height:4px;border-radius:999px;background:var(--lineSoft);display:flex;
+  overflow:hidden;margin-top:18px}
+.rail i{display:block;height:100%}
+.rail .ra{background:var(--us)} .rail .rb{background:var(--them)}
+
+/* ── תמונות מוצר ───────────────────────────── */
+.pair2{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  max-width:980px;margin:0 auto}
+.shot{text-align:center}
+.shot .im{border-radius:20px;overflow:hidden;background:var(--bg2);aspect-ratio:16/10;
+  box-shadow:0 2px 10px rgba(0,0,0,.06),0 20px 50px -28px rgba(0,0,0,.34)}
+:root[data-theme="dark"] .shot .im{box-shadow:0 2px 10px rgba(0,0,0,.5),0 20px 50px -28px rgba(0,0,0,1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shot .im{box-shadow:0 2px 10px rgba(0,0,0,.5),0 20px 50px -28px rgba(0,0,0,1)}}
+.shot .im img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.shot .im .no{display:flex;align-items:center;justify-content:center;height:100%;
+  color:var(--ink3);font-size:15px}
+.shot .nm{margin-top:16px;font-size:17px;font-weight:600;letter-spacing:-.014em}
+.shot .u{font-size:13.5px;color:var(--ink3);margin-top:3px}
+
+/* ── ממצאים ────────────────────────────────── */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));
+  max-width:1000px;margin:0 auto}
+.card{background:var(--bg2);border-radius:20px;padding:30px 26px;text-align:center}
+.sect.grey .card{background:var(--bg)}
+.card .mk{width:42px;height:42px;border-radius:50%;margin:0 auto 16px;display:flex;
+  align-items:center;justify-content:center;font-size:19px;font-weight:700}
+.card.pos .mk{background:var(--usSoft);color:var(--pos)}
+.card.neg .mk{background:var(--themSoft);color:var(--neg)}
+.card.warn .mk{background:var(--themSoft);color:var(--them)}
+.card.info .mk{background:var(--usSoft);color:var(--us)}
+.card h4{margin:0 0 9px;font-size:19px;font-weight:700;letter-spacing:-.018em;line-height:1.28}
+.card p{margin:0;font-size:15.5px;color:var(--ink2);line-height:1.5}
+.card a{display:inline-block;margin-top:11px;font-size:14.5px;font-weight:500}
+
+/* ── רשימה נקייה במקום טבלה ────────────────── */
+.rows{max-width:820px;margin:0 auto;text-align:start}
+.row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+  padding:19px 4px;border-bottom:1px solid var(--lineSoft)}
+.row:last-child{border-bottom:none}
+.row .t{font-size:17px;font-weight:600;letter-spacing:-.014em;
+  overflow:hidden;text-overflow:ellipsis}
+.row .s{font-size:14px;color:var(--ink3);margin-top:3px;line-height:1.4}
+.row .q{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.row.comp .t{color:var(--them)} .row.client .t{color:var(--us)}
+
+/* ── פסי קצב ───────────────────────────────── */
+.metric{max-width:700px;margin:0 auto;text-align:start}
+.metric .mrow{padding:15px 0}
+.metric .mhead{display:flex;justify-content:space-between;align-items:baseline;
+  font-size:15.5px;margin-bottom:9px}
+.metric .mhead b{font-weight:600;letter-spacing:-.012em}
+.metric .mhead span{color:var(--ink3);font-size:14px;font-variant-numeric:tabular-nums}
+.mbar{height:6px;border-radius:999px;background:var(--lineSoft);overflow:hidden}
+.mbar i{display:block;height:100%;border-radius:999px}
+
+/* ── סריקה ─────────────────────────────────── */
+.grid4{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));
+  max-width:1000px;margin:0 auto}
+.tile{background:var(--bg2);border-radius:20px;padding:32px 22px;text-align:center}
+.sect.grey .tile{background:var(--bg)}
+.tile .v{font-size:52px;font-weight:800;line-height:1;letter-spacing:-.038em;
+  font-variant-numeric:tabular-nums}
+.tile.competitor .v{color:var(--them)}
+.tile.client .v{color:var(--us)}
+.tile.channel .v{color:var(--pos)}
+.tile.gray_market .v{color:var(--ink2)}
+.tile .k{font-size:16.5px;font-weight:600;margin-top:14px;letter-spacing:-.014em}
+.tile .d{font-size:14px;color:var(--ink3);margin-top:7px;line-height:1.45}
+
+.loading{display:flex;flex-direction:column;align-items:center;gap:20px;padding:76px 0;
+  color:var(--ink2);font-size:17px}
+.spin{width:30px;height:30px;border:2.5px solid var(--lineSoft);border-top-color:var(--us);
+  border-radius:50%;animation:sp .75s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ── תנועה עדינה ───────────────────────────── */
+.rev{opacity:0;transform:translateY(22px);
+  transition:opacity .68s cubic-bezier(.22,.61,.36,1),transform .68s cubic-bezier(.22,.61,.36,1)}
+.rev.in{opacity:1;transform:none}
+
+footer{padding:56px 26px 76px;text-align:center;font-size:13.5px;color:var(--ink3);
+  line-height:1.85;border-top:1px solid var(--lineSoft);margin-top:40px}
+
+@media (max-width:700px){
+  body{font-size:17px}
+  .sect{padding:72px 0}
+  .duelrow .pair{grid-template-columns:1fr;gap:22px}
+  .duelrow .mid-badge{justify-self:center}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .q{justify-self:start}
+  .peekrow{gap:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rev{opacity:1;transform:none}
+}
+</style>
+
+<script type="application/json" id="ci-data">{"client":{"id":"alma-israel","name":"אלמה ישראל","role":"client","ownership_role":"distributor_group","ownership_label":"מפיצה של טכנולוגיית הקבוצה","ownership_tone":"group","tech_note":"הטכנולוגיה בבעלות Alma Lasers (קבוצת Fosun Pharma). אלמה ישראל היא הזרוע המסחרית בישראל, ובנוסף מפיצה בלעדית של מותגים זרים כמו IBSA.","tech_owner":null,"exclusivity":null,"eligibility":{},"competes_on":[],"watch":[],"avatar":"data:image/webp;base64,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","homepage":"data:image/webp;base64,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","site":{"url":"https://alma-israel.co.il","title":"עמוד ראשי - Alma Israel","meta_desc":"","h1":"","word_count":1189,"tech":["Google Tag Manager","WordPress"]},"content":{"sections":[{"section":"product","label":"מוצרים","pages":16,"updated_12m":12,"months_active":6,"per_month":2.0,"by_month":{"2025-08":1,"2025-09":2,"2026-03":3,"2026-04":1,"2026-05":3,"2026-07":2},"editorial":true},{"section":"event","label":"אירועים","pages":28,"updated_12m":13,"months_active":7,"per_month":1.9,"by_month":{"2025-09":2,"2025-10":1,"2025-11":4,"2025-12":1,"2026-04":1,"2026-06":2,"2026-07":2},"editorial":true},{"section":"product_cat","label":"קטגוריות מוצר","pages":5,"updated_12m":4,"months_active":3,"per_month":1.3,"by_month":{"2026-04":1,"2026-05":2,"2026-07":1},"editorial":false},{"section":"page","label":"עמודים סטטיים","pages":22,"updated_12m":7,"months_active":6,"per_month":1.2,"by_month":{"2025-12":1,"2026-03":1,"2026-04":2,"2026-05":1,"2026-06":1,"2026-07":1},"editorial":false},{"section":"knowledge-base-b2b","label":"בלוג מקצועי · Knowledge Booster","pages":11,"updated_12m":3,"months_active":3,"per_month":1.0,"by_month":{"2025-11":1,"2025-12":1,"2026-07":1},"editorial":true},{"section":"treatment","label":"טיפולים","pages":17,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":true},{"section":"tech","label":"טכנולוגיות","pages":6,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":true},{"section":"treatment-b2c","label":"טיפולים לצרכן","pages":4,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":true},{"section":"success_story","label":"סיפורי הצלחה","pages":4,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":true},{"section":"treatment_cat","label":"קטגוריות טיפול","pages":4,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":false}],"editorial_per_month":4.9,"total_pages":117},"fbPageId":"579140532145681","assets":{"website":"https://alma-israel.co.il","facebook":"https://www.facebook.com/alma.israel.co.il/","instagram":"alma_israel_","tiktok":"alma_israel_","youtube":"@alma_israel_"},"m":{"instagram":{"value":17300.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ig_posts":{"value":1176.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ig_following":{"value":2145.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"tiktok":{"value":5650.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-26","stale":true,"asOf":"2026-08-26"},"tt_likes":{"value":12000.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-26","stale":true,"asOf":"2026-08-26"},"youtube":{"value":243000.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"yt_videos":{"value":409.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ads":{"value":22.0,"prev":22.0,"diff":0.0,"pct":0.0,"since":"2026-08-27","stale":false},"pages":{"value":117.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"cadence":{"value":4.9,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"reviews":null,"rating":null},"trends":{"instagram.followers":[17300.0,17300.0,17300.0],"instagram.posts":[1175.0,1175.0,1176.0],"tiktok.followers":[5650.0,5650.0],"youtube.subscribers":[243000.0,243000.0,243000.0],"youtube.videos":[409.0,409.0,409.0],"meta_ads.active_ads":[22.0,22.0,22.0,22.0],"website.page_count":[177.0,117.0,117.0],"gbp.reviews":[]}},"competitors":[{"id":"cosmed-candela","name":"Cosmed Trade / Candela Medical Israel","role":"competitor","ownership_role":"distributor_third_party","ownership_label":"משווק בלבד — אינו בעל הטכנולוגיה","ownership_tone":"reseller","tech_note":"Cosmed Trade היא חברה ישראלית עצמאית שמשווקת את מכשירי Candela Medical (ארה\"ב) מאז 2018. אין לה בעלות על הטכנולוגיה ואין לה מחלקת פיתוח. המשמעות התחרותית: היא לא קובעת מפת מוצר, לא משחררת דורות חדשים, וחשופה לשינוי בהסכם ההפצה — בדיוק כמו שאלמה ישראל חשופה במוצרי IBSA.","tech_owner":"Candela Medical","exclusivity":"exclusive_il_since_2018","eligibility":{"own_presence":true,"hebrew_active":true,"israel_active":true,"verdict":"included","checked":"2026-08-26","evidence":"אתר ישראלי בעברית (cosmed-trade.com), עמוד פייסבוק עברי משלה, אינסטגרם משלה, ומודעה פעילה בעברית ב-Meta Ad Library."},"competes_on":[{"product":"Soprano Titanium Special Edition","with":"GentleMax Pro / GentleLase — אלכסנדריט + Nd:YAG","threat":"tech_rival"},{"product":"Harmony XL / Alma Harmony","with":"Nordlys / Vbeam","threat":"tech_rival"}],"watch":[{"pattern":"יש לכם מערכת לייזר ישנה","meaning":"קמפיין trade-in — התקפה ישירה על הבסיס המותקן של אלמה","severity":"critical"}],"avatar":"data:image/webp;base64,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","homepage":"data:image/webp;base64,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","site":{"url":"https://cosmed-trade.com","title":"Candela Medical Israel | ציוד רפואי ואסתטי פרימיום","meta_desc":"מחפשים מכשירי לייזר של קנדלה? הנציגות הרשמית של Candela Medical בישראל מציעה מכשור רפואי מתקדם, שירות טרייד-אין ותמיכה טכנית מלאה. היכנסו לקטלוג שלנו!","h1":"מורשת של חדשנות בפתרונות טיפול אסתטיים רפואיים שמשנים חיים","word_count":905,"tech":["Elementor","Google Analytics 4","Google Tag Manager","Meta Pixel","WhatsApp Widget","WordPress"]},"content":{"sections":[{"section":"page","label":"עמודים סטטיים","pages":70,"updated_12m":66,"months_active":3,"per_month":22.0,"by_month":{"2026-02":53,"2026-03":8,"2026-04":5},"editorial":false},{"section":"post","label":"בלוג","pages":22,"updated_12m":17,"months_active":2,"per_month":8.5,"by_month":{"2026-02":15,"2026-03":2},"editorial":true},{"section":"category","label":"קטגוריות","pages":5,"updated_12m":0,"months_active":0,"per_month":0.0,"by_month":{},"editorial":false}],"editorial_per_month":8.5,"total_pages":97},"fbPageId":"882688521605002","assets":{"website":"https://cosmed-trade.com","facebook":"https://www.facebook.com/Candela.Official.IL","instagram":"candelamedical_israel","tiktok":"cosmedtradeltd","youtube":"@COSMEDTRADELTD"},"m":{"instagram":{"value":323.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ig_posts":{"value":76.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ig_following":{"value":838.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"tiktok":{"value":1.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-26","stale":true,"asOf":"2026-08-26"},"tt_likes":{"value":0.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-26","stale":true,"asOf":"2026-08-26"},"youtube":null,"yt_videos":{"value":28.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"ads":{"value":1.0,"prev":1.0,"diff":0.0,"pct":0.0,"since":"2026-08-27","stale":false},"pages":{"value":97.0,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"cadence":{"value":8.5,"prev":null,"diff":null,"pct":null,"since":"2026-08-27","stale":true,"asOf":"2026-08-27"},"reviews":null,"rating":null},"trends":{"instagram.followers":[322.0,322.0,323.0],"instagram.posts":[75.0,75.0,76.0],"tiktok.followers":[1.0],"youtube.subscribers":[],"youtube.videos":[28.0,28.0,28.0],"meta_ads.active_ads":[1.0,1.0,1.0,1.0],"website.page_count":[101.0,97.0,97.0],"gbp.reviews":[]}}],"excluded":[{"id":"lumenis-il","name":"Lumenis","role":"competitor","ownership_role":"manufacturer","ownership_label":"בעלת הטכנולוגיה — בלי זרוע שיווק ישראלית","ownership_tone":"owner","tech_note":"Lumenis מפתחת ומייצרת בעצמה. בישראל אין לה שיווק דיגיטלי עצמאי, והנוכחות בשוק מגיעה דרך קליניקות בלבד.","tech_owner":"Lumenis","exclusivity":null,"eligibility":{"own_presence":false,"hebrew_active":false,"israel_active":false,"verdict":"excluded","checked":"2026-08-26","evidence":"אין דומיין ישראלי פעיל (lumenis.co.il אינו נפתר). חיפוש \"לומניס\" ב-Meta Ad Library החזיר 6 מודעות פעילות — אף אחת מהן אינה של לומניס עצמה.","note":"הטכנולוגיה נוכחת בשוק דרך קליניקות, אך החברה אינה משווקת בעצמה בעברית. לכן היא אינה בת-השוואה, ומופיעה בשכבת השוק בלבד."},"competes_on":[{"product":"Harmony XL / Alma Harmony","with":"Stellar M22 / Splendor X","threat":"tech_rival"}],"watch":[],"avatar":null,"homepage":null,"site":null,"content":{},"fbPageId":"","assets":{},"m":{"instagram":null,"ig_posts":null,"ig_following":null,"tiktok":null,"tt_likes":null,"youtube":null,"yt_videos":null,"ads":null,"pages":null,"cadence":null,"reviews":null,"rating":null},"trends":{"instagram.followers":[],"instagram.posts":[],"tiktok.followers":[],"youtube.subscribers":[],"youtube.videos":[],"meta_ads.active_ads":[],"website.page_count":[],"gbp.reviews":[]}},{"id":"inmode-il","name":"InMode","role":"competitor","ownership_role":"manufacturer","ownership_label":"בעלת הטכנולוגיה — בלי זרוע שיווק ישראלית","ownership_tone":"owner","tech_note":"InMode היא חברה ישראלית שמפתחת ומייצרת בעצמה (יקנעם). למרות זאת אין לה שיווק דיגיטלי עברי, ו-Morpheus8 מגיע לשוק דרך הקליניקות שרכשו אותו.","tech_owner":"InMode","exclusivity":null,"eligibility":{"own_presence":false,"hebrew_active":false,"israel_active":false,"verdict":"excluded","checked":"2026-08-26","evidence":"inmode.co.il מחזיר 403 ואינו אתר שיווקי עברי. חיפוש \"מורפאוס\" ב-Meta Ad Library החזיר 13 מודעות פעילות, כולן של קליניקות (Rose Clinic, Royale-Med, myclinic ואחרות) — אפס מודעות של InMode עצמה.","note":"בסיס מותקן נרחב בשוק אך אפס שיווק עצמי בעברית. Morpheus8 מתחרה על תשומת לב הצרכן מול הטיפולים של אלמה, אך InMode אינה מתחרה דיגיטלית בת-השוואה."},"competes_on":[{"product":"Alma PrimeX","with":"BodyTite / Morpheus8","threat":"tech_rival"}],"watch":[],"avatar":null,"homepage":null,"site":null,"content":{},"fbPageId":"","assets":{},"m":{"instagram":null,"ig_posts":null,"ig_following":null,"tiktok":null,"tt_likes":null,"youtube":null,"yt_videos":null,"ads":null,"pages":null,"cadence":null,"reviews":null,"rating":null},"trends":{"instagram.followers":[],"instagram.posts":[],"tiktok.followers":[],"youtube.subscribers":[],"youtube.videos":[],"meta_ads.active_ads":[],"website.page_count":[],"gbp.reviews":[]}}],"scans":{"חומצה היאלורונית":{"term":"חומצה היאלורונית","buckets":{"channel":7},"pages":[{"name":"Trimella","n":2,"kind":"channel","title":"פתאום התחילו לשאול אותי מה עשיתי לעור שלי 💗","url":"https://www.facebook.com/ads/library/?id=1716948402928213"},{"name":"ויויאן חיים אורבך","n":1,"kind":"channel","title":"הסיבה האמיתית לנזק במפרקים","url":"https://www.facebook.com/ads/library/?id=811986431977481"},{"name":"אלטמן בריאות","n":1,"kind":"channel","title":"אלטמן בריאות | רוטס HR גולד","url":"https://www.facebook.com/ads/library/?id=4245004115643963"},{"name":"Vital Or","n":1,"kind":"channel","title":"כאב בברכיים? זה לא חייב להיגמר בניתוח","url":"https://www.facebook.com/ads/library/?id=1102524539005834"},{"name":"Dr Pnina Boldan","n":1,"kind":"channel","title":"","url":"https://www.facebook.com/ads/library/?id=884942427820723"},{"name":"ד\"ר זייד- Dr.Zaid","n":1,"kind":"channel","title":"api.whatsapp.com","url":"https://www.facebook.com/ads/library/?id=2091472365578739"}],"total":7},"מכשיר לייזר לקליניקה":{"term":"מכשיר לייזר לקליניקה","buckets":{"competitor":18,"channel":2},"pages":[{"name":"Laseray","n":18,"kind":"competitor","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1072389035528133"},{"name":"קוסמטיקס אקספרס","n":1,"kind":"channel","title":"בזמן שכולם מסירים שיער - את יכולה להרוויח מהצמחת שיער","url":"https://www.facebook.com/ads/library/?id=2561112397728789"},{"name":"האפי לייזר - מכשיר ביתי להסרת שיער","n":1,"kind":"channel","title":"45% הנחה לזמן מוגבל!","url":"https://www.facebook.com/ads/library/?id=1419201770056487"}],"total":20},"סופרנו הסרת שיער":{"term":"סופרנו הסרת שיער","buckets":{"channel":8},"pages":[{"name":"SKN Studio","n":1,"kind":"channel","title":"הסרת שיער","url":"https://www.facebook.com/ads/library/?id=1022224660811927"},{"name":"Formantlv","n":1,"kind":"channel","title":"הסרת שיער בלייזר לגברים, ללא התחייבות לחבילה","url":"https://www.facebook.com/ads/library/?id=3210195732702811"},{"name":"Karma Cosmetics","n":1,"kind":"channel","title":"הסרת שיער בלייזר עם התמחות בבני נוער","url":"https://www.facebook.com/ads/library/?id=2507767179649108"},{"name":"ד\"ר אייל נס - בריאות ואסתטיקה","n":1,"kind":"channel","title":"לפרטים והגשת מועמדות","url":"https://www.facebook.com/ads/library/?id=1931849600822109"},{"name":"Soprano Titanuim הסרת שיער","n":1,"kind":"channel","title":"אין תוצאות? קיבלת את הכסף חזרה","url":"https://www.facebook.com/ads/library/?id=1370204365243163"},{"name":"פרופורציה","n":1,"kind":"channel","title":"מבצע 2+2 לנשים על הסרת שיער בלייזר>>","url":"https://www.facebook.com/ads/library/?id=1071758445788874"},{"name":"מירי קליין - הסרת שיער בלייזר","n":1,"kind":"channel","title":"שלחי לי הודעה ונתאם פגישה","url":"https://www.facebook.com/ads/library/?id=1043246805361764"},{"name":"Naya הסרת שיער בלייזר ויופי","n":1,"kind":"channel","title":"לחצי להשארת פרטים 👇","url":"https://www.facebook.com/ads/library/?id=1492043672952932"}],"total":8}},"events":[{"severity":"high","sevHe":"גבוה","cat":"discovery","catHe":"גילוי","entity":"page:1165011790030437","name":"Laseray","headline":"זוהה מתחרה אפשרי שלא ברשימה: Laseray","detail":"פנייה B2B לבעלי קליניקות (1 סימנים) — מפיץ שלא ברשימה\nדוגמה מהמודעה: «לייזר משתלם לקליניקה שלך >>»\nדורש אישור ידני לפני שייכנס למעקב.","url":"https://www.facebook.com/ads/library/?id=1072389035528133"},{"severity":"info","sevHe":"לידיעה","cat":"ads","catHe":"פרסום","entity":"page:1165011790030437","name":"Laseray","headline":"מדידה ראשונה: 18 מודעות פעילות אצל Laseray","detail":"אין בסיס להשוואה עדיין — מהשבוע הבא יוצגו שינויים","url":null},{"severity":"info","sevHe":"לידיעה","cat":"market","catHe":"שוק","entity":null,"name":null,"headline":"בסיס מותקן לפי פרסום קליניקות: 1 מודעות מזוהות מותג","detail":"alma: 1 (100%)\nקליניקה שמפרסמת מותג היא לקוחה שלו — זהו פרוקסי לנתח שוק בשטח.","url":null}],"adSplit":{"channel":17,"client":22,"competitor":19},"channel":[{"page_name":"Trimella","install_base":null,"n":2},{"page_name":"קוסמטיקס אקספרס","install_base":null,"n":1},{"page_name":"פרופורציה","install_base":null,"n":1},{"page_name":"מירי קליין - הסרת שיער בלייזר","install_base":null,"n":1},{"page_name":"ויויאן חיים אורבך","install_base":null,"n":1},{"page_name":"האפי לייזר - מכשיר ביתי להסרת שיער","install_base":null,"n":1},{"page_name":"ד\"ר זייד- Dr.Zaid","install_base":null,"n":1},{"page_name":"ד\"ר אייל נס - בריאות ואסתטיקה","install_base":null,"n":1},{"page_name":"אלטמן בריאות","install_base":null,"n":1},{"page_name":"Vital Or","install_base":null,"n":1},{"page_name":"Soprano Titanuim הסרת שיער","install_base":"alma","n":1},{"page_name":"SKN Studio","install_base":null,"n":1},{"page_name":"Naya הסרת שיער בלייזר ויופי","install_base":null,"n":1},{"page_name":"Karma Cosmetics","install_base":null,"n":1},{"page_name":"Formantlv","install_base":null,"n":1},{"page_name":"Dr Pnina Boldan","install_base":null,"n":1}],"compAds":[{"page":"Candela Medical Israel - קנדלה מדיקל ישראל","title":"יש לכם מערכת לייזר ישנה?","url":"https://www.facebook.com/ads/library/?id=1069623652682171","days":22,"entity":"cosmed-candela"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1072389035528133","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1030219233252054","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=840486755724634","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1386526763625883","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1394478469307507","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=1032095189449307","days":2,"entity":"page:1165011790030437"},{"page":"Laseray","title":"לייזר משתלם לקליניקה שלך >>","url":"https://www.facebook.com/ads/library/?id=3046317535570668","days":2,"entity":"page:1165011790030437"}],"ourAds":[{"page":"אלמה ישראל - Alma Israel","title":"רוצים הצצה ראשונה? דברו איתנו >","url":"https://www.facebook.com/ads/library/?id=2277520319447390","days":159,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"אלמה ישראל | רוצים הצצה ראשונה? לחצו>","url":"https://www.facebook.com/ads/library/?id=2053008015572777","days":90,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"רוצים הצצה ראשונה? דברו איתנו >","url":"https://www.facebook.com/ads/library/?id=1717509925952291","days":52,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"{{product.name}}","url":"https://www.facebook.com/ads/library/?id=1182569920694059","days":30,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"רוצים לשמוע עוד? לחצו >","url":"https://www.facebook.com/ads/library/?id=1530462431612763","days":11,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"רוצים לשמוע עוד? לחצו >","url":"https://www.facebook.com/ads/library/?id=1933739443970407","days":11,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"לפרטים נוספים לחצו >","url":"https://www.facebook.com/ads/library/?id=1382911673340677","days":10,"entity":"alma-israel"},{"page":"אלמה ישראל - Alma Israel","title":"הדור הבא בטיפולים אסתטיים - לפרטים>","url":"https://www.facebook.com/ads/library/?id=1680123907450814","days":10,"entity":"alma-israel"}],"log":[{"entity_id":"alma-israel","platform":"gbp","status":"failed","message":"לא נמצאו נתוני ביקורות בדף החיפוש"},{"entity_id":"cosmed-candela","platform":"gbp","status":"failed","message":"לא נמצאו נתוני ביקורות בדף החיפוש"},{"entity_id":null,"platform":"meta_ads","status":"ok","message":"59 מודעות"}],"logOk":1,"logTotal":3,"portfolio":[{"product":"Soprano Titanium Special Edition","aliases":["סופרנו","Soprano","Soprano Titanium","סופרנו טיטניום"],"category":"hair_removal","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"כאב מול יעילות; מספר טיפולים; התאמה לכל גוון עור","threats":[]},{"product":"Harmony XL / Alma Harmony","aliases":["הרמוני","Harmony","Harmony XL Pro"],"category":"skin_quality","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"פלטפורמה רב-אפליקטיבית — כמה טיפולים ממכשיר אחד","threats":[]},{"product":"Alma Hybrid","aliases":["היבריד","Hybrid"],"category":"skin_quality","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"CO2 + דיודה משולב; זמן החלמה","threats":[]},{"product":"Opus","aliases":["אופוס","Opus Plasma"],"category":"skin_quality","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"פלזמה מול לייזר אבלטיבי; downtime","threats":[]},{"product":"Alma PrimeX","aliases":["פריים אקס","PrimeX","Prime X"],"category":"body_contouring","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"מול BTL Emsculpt / InMode — עיצוב גוף לא פולשני","threats":[]},{"product":"FemiLift","aliases":["פמיליפט","FemiLift"],"category":"sexual_wellness","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"CO2 ואגינלי — מול MonaLisa Touch","threats":[]},{"product":"Alma Duo","aliases":["Alma Duo","אלמה דואו"],"category":"sexual_wellness","ownership":"parent_tech","techOwner":"Alma Lasers","moat":"technological","battleground":"LI-ESWT — גלי הלם לתפקוד מיני","threats":[]},{"product":"BeautiFill","aliases":["ביוטיפיל","BeautiFill","LipoLife"],"category":"body_contouring","ownership":"parent_tech","techOwner":"Alma Lasers / LipoLife","moat":"technological","battleground":null,"threats":[]},{"product":"HALLURA","aliases":["הלורה","Hallura"],"category":"injectables","ownership":"distributed","techOwner":"Hallura Ltd","moat":"contractual","battleground":"מותג מול מותג: טבעיות, אורך חיים, מוניטין המזריק","threats":["brand_rival_same_category","distribution_loss"]},{"product":"Profhilo","aliases":["פרופילו","Profhilo"],"category":"injectables","ownership":"distributed","techOwner":"IBSA Derma","moat":"contractual","battleground":null,"threats":["brand_rival_same_category","distribution_loss"]},{"product":"Aliaxin","aliases":["אליאקסין","Aliaxin"],"category":"injectables","ownership":"distributed","techOwner":"IBSA Derma","moat":"contractual","battleground":null,"threats":["brand_rival_same_category","distribution_loss"]},{"product":"Viscoderm Hydrobooster","aliases":["ויסקודרם","Viscoderm"],"category":"injectables","ownership":"distributed","techOwner":"IBSA Derma","moat":"contractual","battleground":null,"threats":["brand_rival_same_category","distribution_loss"]}],"adTerms":["סופרנו","Soprano Titanium","הסרת שיער בלייזר","קנדלה","GentleMax","חומצה היאלורונית","הלורה","פרופילו","Profhilo","מכשיר לייזר לקליניקה","עיצוב גוף לא פולשני"],"eligibilityRule":{"require":["own_presence","hebrew_active","israel_active"],"on_fail":"exclude_from_comparison_but_show_reason"},"meta":{"runId":5,"runAt":"2026-08-27 11:02","dateHe":"27.08.2026","hasBaseline":true,"clientName":"אלמה ישראל","market":"IL","mode":"client"}}</script>
+
+<div id="view-home"></div>
+<div id="view-report" hidden></div>
+<div id="view-scan" hidden></div>
+
+<script>
+(function(){
+"use strict";
+var D = JSON.parse(document.getElementById("ci-data").textContent);
+var $ = function(id){ return document.getElementById(id); };
+var HOME = $("view-home"), REP = $("view-report"), SCAN = $("view-scan");
+
+function esc(s){ return String(s == null ? "" : s)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+function num(v){ return v == null ? "—" : Math.round(v).toLocaleString("he-IL"); }
+function dec(v){ return v == null ? "—" : (Math.round(v*10)/10).toLocaleString("he-IL"); }
+function sign(v){ return v == null ? "" : (v > 0 ? "+" : "") + Math.round(v).toLocaleString("he-IL"); }
+function val(m){ return m && m.value != null ? m.value : null; }
+
+/* window.claude קיים רק בתוך הצופה של claude.ai. בעותק שמור או בשרת
+   אחר הוא פשוט לא שם — קריאה ישירה תזרוק ותשבור את הדף. */
+async function cap(name){
+  try{
+    var c = window.claude;
+    if(!c || typeof c.use !== "function") return null;
+    return await c.use(name);
+  }catch(e){ return null; }
+}
+
+/* חשיפה הדרגתית בגלילה */
+var io = null;
+function reveal(root){
+  var els = (root || document).querySelectorAll(".rev");
+  if(!("IntersectionObserver" in window) ||
+     matchMedia("(prefers-reduced-motion: reduce)").matches){
+    [].forEach.call(els, function(e){ e.classList.add("in"); }); return;
+  }
+  if(!io) io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, {rootMargin:"0px 0px -8% 0px", threshold:.06});
+  [].forEach.call(els, function(e){ io.observe(e); });
+}
+function show(which){
+  HOME.hidden = which !== "home";
+  REP.hidden  = which !== "report";
+  SCAN.hidden = which !== "scan";
+  window.scrollTo(0,0);
+  reveal(which === "home" ? HOME : which === "report" ? REP : SCAN);
+}
+
+/* ══════════ כניסה ══════════ */
+var LIVE = D.meta.mode !== "client";
+var SCAN_TERMS = Object.keys(D.scans || {});
+
+function renderHome(){
+  var m = D.client.m;
+  var scanOpts = SCAN_TERMS.map(function(t){
+    var sc = D.scans[t];
+    return '<option value="'+esc(t)+'">'+esc(t)+" — "+num(sc.total)+" מודעות</option>"; }).join("");
+  var opts = D.competitors.map(function(x){
+    return '<option value="'+esc(x.id)+'">'+esc(x.name)+"</option>"; }).join("");
+  var exOpts = D.excluded.map(function(x){
+    return '<option value="'+esc(x.id)+'">'+esc(x.name)+" — לא בהשוואה</option>"; }).join("");
+  var chips = D.portfolio.slice(0,6).map(function(p){
+    var t = (p.aliases && p.aliases[0]) || p.product;
+    return '<button class="chip" data-term="'+esc(t)+'">'+esc(t)+"</button>"; }).join("");
+
+  HOME.innerHTML =
+    '<div class="enter">'
+    + '<div class="mark"><span class="dot"></span><span>'+esc(D.meta.clientName)+" · מצפן תחרות</span></div>"
+    + '<h1 class="mega">איזה מתחרה תרצה<br>לבדוק היום?</h1>'
+    + '<p class="lead">השוואה מלאה מול הנתונים שלנו — או סריקה חיה של מי מפרסם על מוצר מסוים.</p>'
+
+    + '<div class="seg" role="tablist">'
+    +   '<button role="tab" aria-selected="true" data-m="pick">בדיקת מתחרה</button>'
+    +   '<button role="tab" aria-selected="false" data-m="scan">סריקת שוק</button>'
+    + "</div>"
+
+    + '<div class="control" id="mPick">'
+    +   '<div class="sel-wrap"><select class="big" id="pick" aria-label="בחר מתחרה">'
+    +     (opts ? '<optgroup label="כשירים להשוואה">'+opts+"</optgroup>" : "")
+    +     (exOpts ? '<optgroup label="נפסלו בשער הכשירות">'+exOpts+"</optgroup>" : "")
+    +   "</select></div>"
+    +   '<div id="peek" class="peek"></div>'
+    +   '<button class="cta" id="goPick">הצג השוואה</button>'
+    + "</div>"
+
+    + '<div class="control" id="mScan" hidden>'
+    +   (LIVE
+        ? '<input class="big" type="text" id="term" autocomplete="off" '
+          + 'placeholder="שם מוצר או טכנולוגיה" aria-label="שם מוצר">'
+          + '<div class="chips">'+chips+"</div>"
+        : '<select class="big" id="term" aria-label="בחר מונח">'+scanOpts+"</select>")
+    +   '<button class="cta warm" id="goScan">'+(LIVE ? "סרוק שוק" : "הצג סריקה")+"</button>"
+    +   '<p class="hint">'
+    +     (LIVE ? "בודק מודעות פעילות בפייסבוק ובאינסטגרם, בזמן אמת."
+              : "מודעות פעילות בפייסבוק ובאינסטגרם, מהסריקה של "+esc(D.meta.dateHe)+".")
+    +   "</p>"
+    + "</div>"
+
+    + '<div class="scrollcue">עודכן '+esc(D.meta.dateHe)+" · "+D.logOk+"/"+D.logTotal+" מקורות</div>"
+    + "</div>";
+
+  var segs = [].slice.call(document.querySelectorAll(".seg button"));
+  segs.forEach(function(b){
+    b.addEventListener("click", function(){
+      segs.forEach(function(x){ x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+      $("mPick").hidden = b.dataset.m !== "pick";
+      $("mScan").hidden = b.dataset.m !== "scan";
+      if(b.dataset.m === "scan") $("term").focus();
+    });
+  });
+
+  function peek(){
+    var id = $("pick").value, all = D.competitors.concat(D.excluded), t = null;
+    for(var i=0;i<all.length;i++) if(all[i].id === id) t = all[i];
+    if(!t){ $("peek").innerHTML = ""; return; }
+    var ex = t.eligibility && t.eligibility.verdict === "excluded";
+    $("peek").innerHTML =
+      '<span class="own '+esc(t.ownership_tone)+'">'+esc(t.ownership_label||"—")+"</span>"
+      + (ex
+        ? '<p class="fine" style="margin-top:13px">נפסל בשער הכשירות — ייפתח עם ההסבר והראיה, בלי השוואה מספרית.</p>'
+        : '<div class="peekrow">'
+          + pk("אינסטגרם", num(val(t.m.instagram)))
+          + pk("מודעות", num(val(t.m.ads)))
+          + pk("תוכן לחודש", dec(val(t.m.cadence)))
+          + "</div>");
+  }
+  function pk(k,v){ return '<div><span class="k">'+esc(k)+'</span><b class="num">'+esc(v)+"</b></div>"; }
+  $("pick").addEventListener("change", peek); peek();
+  $("goPick").addEventListener("click", function(){ showReport($("pick").value); });
+  $("goScan").addEventListener("click", function(){ runScan($("term").value.trim()); });
+  $("term").addEventListener("keydown", function(e){
+    if(e.key === "Enter") runScan($("term").value.trim()); });
+  [].forEach.call(document.querySelectorAll(".chip"), function(b){
+    b.addEventListener("click", function(){
+      $("term").value = b.dataset.term; runScan(b.dataset.term); }); });
+}
+
+function topbar(who){
+  return '<div class="topbar"><div class="in">'
+    + '<button class="back" id="back">‹ חזרה</button>'
+    + '<span class="who">'+esc(who)+"</span>"
+    + '<span class="when">ריצה #'+D.meta.runId+" · "+esc(D.meta.dateHe)+"</span>"
+    + "</div></div>";
+}
+function wireBack(){ var b = $("back"); if(b) b.addEventListener("click", function(){ show("home"); }); }
+
+/* ══════════ דוח מתחרה ══════════ */
+function showReport(id){
+  var all = D.competitors.concat(D.excluded), t = null;
+  for(var i=0;i<all.length;i++) if(all[i].id === id) t = all[i];
+  if(!t) return;
+  var c = D.client, ex = t.eligibility && t.eligibility.verdict === "excluded";
+
+  var h = topbar(t.name)
+    + '<div class="phero rev"><div class="mid">'
+    +   '<div class="av">'+(t.avatar ? '<img src="'+esc(t.avatar)+'" alt="">' : "")+"</div>"
+    +   '<h1 class="mega">'+esc(t.name)+"</h1>"
+    +   (t.tech_owner ? '<p class="lead">מייצג את הטכנולוגיה של '+esc(t.tech_owner)+"</p>" : "")
+    +   '<div style="margin-top:24px"><span class="own '+esc(t.ownership_tone)+'">'
+    +     esc(t.ownership_label||"בעלות לא ידועה")+"</span></div>"
+    + "</div></div>";
+
+  /* בעלות — השאלה הראשונה שצריך לענות עליה */
+  h += '<div class="sect grey"><div class="mid rev">'
+    + '<p class="eyebrow blue">בעלות על הטכנולוגיה</p>'
+    + '<h2 class="big">'+esc(t.ownership_label||"—")+"</h2>"
+    + (t.tech_note ? '<p class="body">'+esc(t.tech_note)+"</p>" : "")
+    + '<p class="fine" style="margin-top:30px"><b style="color:var(--ink2)">'
+    +   esc(c.name)+"</b> — "+esc(c.ownership_label||"")+". "+esc(c.tech_note||"")+"</p>"
+    + "</div></div>";
+
+  if(!ex && t.competes_on && t.competes_on.length){
+    h += '<div class="sect tight"><div class="mid rev">'
+      + '<h3 class="mid-t">איפה הם נוגעים בנו</h3>'
+      + '<div class="rows" style="margin-top:26px">';
+    t.competes_on.forEach(function(x){
+      h += '<div class="row"><div><div class="t">'+esc(x.product)+"</div>"
+        + '<div class="s">מול '+esc(x.with||"—")+"</div></div>"
+        + '<div class="q" style="font-size:15px;font-weight:500;color:var(--ink3)">'
+        + (x.threat === "tech_rival" ? "טכנולוגיה מתחרה" : esc(x.threat||"—"))+"</div></div>";
+    });
+    h += "</div></div></div>";
+  }
+
+  if(ex){
+    var k = t.eligibility;
+    h += '<div class="sect"><div class="mid rev">'
+      + '<p class="eyebrow">שער כשירות</p>'
+      + '<h2 class="big">למה הוא לא נכנס להשוואה</h2>'
+      + '<div class="peekrow" style="margin-top:30px">'
+      +   pkChk("נוכחות עצמאית", k.own_presence)
+      +   pkChk("שיווק בעברית", k.hebrew_active)
+      +   pkChk("פעילות בישראל", k.israel_active)
+      + "</div>"
+      + (k.evidence ? '<p class="body">'+esc(k.evidence)+"</p>" : "")
+      + (k.note ? '<p class="fine">'+esc(k.note)+"</p>" : "")
+      + "</div></div>";
+    REP.innerHTML = h + foot(); show("report"); wireBack(); return;
+  }
+
+  /* השוואה */
+  h += '<div class="sect"><div class="mid">'
+    + '<div class="rev"><p class="eyebrow">ראש בראש</p>'
+    + '<h2 class="big">איך אנחנו נראים מולם</h2>'
+    + '<p class="body">כחול אנחנו, כתום הם.</p></div>'
+    + '<div class="duel rev" style="margin-top:44px">'
+    + duel("עוקבים באינסטגרם", c, t, "instagram")
+    + duel("פוסטים באינסטגרם", c, t, "ig_posts")
+    + duel("עוקבים בטיקטוק", c, t, "tiktok")
+    + duel("מנויים ביוטיוב", c, t, "youtube")
+    + duel("סרטונים ביוטיוב", c, t, "yt_videos")
+    + duel("מודעות פעילות", c, t, "ads")
+    + duel("עמודים באתר", c, t, "pages")
+    + duel("פריטי תוכן בחודש", c, t, "cadence", true)
+    + (val(c.m.reviews) != null || val(t.m.reviews) != null
+        ? duel("ביקורות בגוגל", c, t, "reviews") : "")
+    + "</div></div></div>";
+
+  /* בדיקה חיה */
+  h += '<div class="sect grey"><div class="mid rev" id="liveads">'
+    + '<div class="loading"><span class="spin"></span>בודק כמה מודעות פעילות להם ברגע זה…</div>'
+    + "</div></div>";
+
+  if(t.watch && t.watch.length){
+    h += '<div class="sect"><div class="wide rev">'
+      + '<p class="eyebrow">דגלי תצפית</p><h2 class="big">מה שווה לשים לב אליו</h2>'
+      + '<div class="cards" style="margin-top:40px">';
+    t.watch.forEach(function(w){
+      h += '<div class="card neg"><div class="mk">!</div><h4>«'+esc(w.pattern)+"»</h4>"
+        + "<p>"+esc(w.meaning)+"</p></div>";
+    });
+    h += "</div></div></div>";
+  }
+
+  /* אתרים */
+  h += '<div class="sect grey"><div class="wide">'
+    + '<div class="rev"><p class="eyebrow">אתרים</p><h2 class="big">דף מול דף</h2>'
+    + '<p class="body">צילום שבועי. שינוי מזוהה אוטומטית.</p></div>'
+    + '<div class="pair2 rev" style="margin-top:44px">'+shot(c)+shot(t)+"</div>";
+  var f = siteFindings(c, t);
+  if(f) h += '<div class="cards rev" style="margin-top:40px">'+f+"</div>";
+  h += "</div></div>";
+
+  h += contentSection(c, t);
+
+  var evs = D.events.filter(function(e){ return e.entity === t.id || e.entity === c.id; });
+  if(evs.length){
+    h += '<div class="sect"><div class="wide rev">'
+      + '<p class="eyebrow">מאז המדידה הקודמת</p><h2 class="big">מה השתנה</h2>'
+      + '<div class="cards" style="margin-top:40px">';
+    evs.forEach(function(e){
+      var tone = (e.severity === "critical" || e.severity === "high") ? "neg"
+               : e.severity === "medium" ? "warn" : "info";
+      h += '<div class="card '+tone+'"><div class="mk">'+esc(e.sevHe.charAt(0))+"</div>"
+        + "<h4>"+esc(e.headline)+"</h4>"
+        + (e.detail ? "<p>"+esc(e.detail)+"</p>" : "")
+        + (e.url ? '<a href="'+esc(e.url)+'" target="_blank" rel="noopener">ראיה ›</a>' : "")
+        + "</div>";
+    });
+    h += "</div></div></div>";
+  }
+
+  REP.innerHTML = h + foot();
+  show("report"); wireBack(); refreshLiveAds(t);
+}
+function pkChk(label, ok){
+  return '<div><span class="k">'+esc(label)+'</span><b style="color:'
+    + (ok ? "var(--pos)" : "var(--them)")+'">'+(ok ? "✓" : "✗")+"</b></div>";
+}
+
+function duel(label, c, t, key, isDec){
+  var a = c.m[key], b = t.m[key], av = val(a), bv = val(b);
+  var tot = (av||0)+(bv||0), pa = tot ? (av||0)/tot*100 : 50;
+  var badge = "";
+  if(av != null && bv != null && av !== bv){
+    var better = av > bv;
+    var r = better ? (bv ? av/bv : null) : (av ? bv/av : null);
+    badge = '<span class="mid-badge '+(better?"us":"them")+'">'
+          + (better ? "אנחנו" : "הם") + (r && isFinite(r) ? " · פי "+dec(r) : "") + "</span>";
+  } else badge = '<span class="mid-badge">מול</span>';
+  function sideHtml(cls, ent, mm, v){
+    return '<div class="side '+cls+'"><div class="v">'+(isDec ? dec(v) : num(v))+"</div>"
+      + '<div class="nm">'+esc(ent.name)+"</div>"
+      + '<div class="dl'+(mm && !mm.stale && mm.diff > 0 ? " up" : mm && !mm.stale && mm.diff < 0 ? " down" : "")+'">'
+      + (!mm ? "" : mm.stale ? "נמדד "+esc(mm.asOf||"") : mm.diff == null ? "מדידת בסיס"
+         : mm.diff === 0 ? "ללא שינוי" : (mm.diff > 0 ? "▲ " : "▼ ") + sign(mm.diff))
+      + "</div></div>";
+  }
+  return '<div class="duelrow"><div class="cap">'+esc(label)+"</div>"
+    + '<div class="pair">'+sideHtml("a", c, a, av)+badge+sideHtml("b", t, b, bv)+"</div>"
+    + '<div class="rail"><i class="ra" style="width:'+pa.toFixed(1)+'%"></i>'
+    + '<i class="rb" style="width:'+(100-pa).toFixed(1)+'%"></i></div></div>';
+}
+
+function shot(e){
+  var s = e.site || {};
+  return '<div class="shot"><div class="im">'
+    + (e.homepage ? '<img src="'+esc(e.homepage)+'" alt="" loading="lazy">'
+                  : '<div class="no">אין צילום</div>')
+    + '</div><div class="nm">'+esc(e.name)+'</div><div class="u">'+esc(s.url||"")+"</div></div>";
+}
+
+function siteFindings(c, t){
+  var out = "", cs = c.site || {}, ts = t.site || {};
+  function gap(field, label){
+    var we = !!(cs[field] && String(cs[field]).trim()), they = !!(ts[field] && String(ts[field]).trim());
+    if(!we && they)
+      out += '<div class="card neg"><div class="mk">✗</div><h4>'+esc(label)
+        + " חסר אצלנו</h4><p>קיים אצלם. זה קובע איך גוגל מציג את העמוד בתוצאות החיפוש.</p></div>";
+    else if(we && !they)
+      out += '<div class="card pos"><div class="mk">✓</div><h4>'+esc(label)
+        + " קיים אצלנו</h4><p>חסר אצלם — יתרון בתצוגת תוצאות החיפוש.</p></div>";
+  }
+  gap("meta_desc", "תיאור meta");
+  gap("h1", "כותרת H1");
+  var ct = (cs.tech||[]).length, tt = (ts.tech||[]).length;
+  if(tt > ct)
+    out += '<div class="card warn"><div class="mk">!</div><h4>'+tt+" כלי מדידה מול "+ct
+      + " אצלנו</h4><p>"+esc((ts.tech||[]).join(", "))
+      + ". פער כזה קובע מי מסוגל לייחס לידים לקמפיין.</p></div>";
+  return out;
+}
+
+function contentSection(c, t){
+  function block(e){
+    var ct = e.content || {};
+    if(!ct.sections || !ct.sections.length) return "";
+    var mx = 0; ct.sections.forEach(function(s){ if(s.per_month > mx) mx = s.per_month; });
+    var col = e.role === "client" ? "var(--us)" : "var(--them)";
+    var rows = ct.sections.slice(0,5).map(function(s){
+      return '<div class="mrow"><div class="mhead"><b>'+esc(s.label)
+        + (s.editorial ? "" : ' <span style="font-weight:400">סטטי</span>')
+        + "</b><span>"+dec(s.per_month)+" לחודש · "+num(s.pages)+" עמ׳</span></div>"
+        + '<div class="mbar"><i style="width:'+(mx ? (s.per_month/mx*100) : 0).toFixed(1)
+        + "%;background:"+col+";opacity:"+(s.editorial?"1":".35")+'"></i></div></div>';
+    }).join("");
+    return '<div style="margin-top:48px">'
+      + '<h3 class="mid-t" style="margin-bottom:6px">'+esc(e.name)+"</h3>"
+      + '<p class="body" style="margin-top:0"><span style="color:'+col
+      + ';font-weight:700;font-size:30px" class="num">'+dec(ct.editorial_per_month)
+      + "</span> פריטים בחודש</p>"
+      + '<div class="metric" style="margin-top:22px">'+rows+"</div></div>";
+  }
+  var a = block(c), b = block(t);
+  if(!a && !b) return "";
+  return '<div class="sect"><div class="mid rev">'
+    + '<p class="eyebrow">תוכן</p><h2 class="big">מי מפרסם יותר</h2>'
+    + '<p class="body">סוגי התוכן נגזרים ממבנה הסייטמאפ של כל אתר. '
+    + "הקצב מחושב מתאריך העדכון האחרון, לא מתאריך הפרסום.</p>"
+    + a + b + "</div></div>";
+}
+
+/* ══════════ בדיקה חיה ══════════ */
+function convId(){
+  var s = "", cs = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for(var i=0;i<20;i++) s += cs.charAt(Math.floor(Math.random()*cs.length));
+  return s;
+}
+function parsePayload(p){
+  if(!p) return null;
+  var raw = p.results != null ? p.results : p;
+  if(typeof raw === "string"){ try{ return JSON.parse(raw); }catch(e){ return null; } }
+  return raw;
+}
+function adSearch(mcp, args){ return mcp.callTool("meta mcp", "ads_library_search", args); }
+function errMsg(err){
+  var c = err && err.code ? err.code : "";
+  if(c === "server_not_connected") return "מחבר Meta אינו מחובר בחשבון הצופה.";
+  if(c === "not_granted") return "לא ניתן אישור לגשת למחבר.";
+  if(c === "rate_limited") return "יותר מדי בקשות — כדאי לנסות בעוד רגע.";
+  if(c === "tool_error") return "הכלי החזיר שגיאה.";
+  return "שגיאה" + (c ? " (" + c + ")" : "") + ".";
+}
+function wrapLive(eyebrow, title, body){
+  return '<p class="eyebrow blue">'+esc(eyebrow)+'</p><h2 class="big">'+title+"</h2>"+body;
+}
+async function refreshLiveAds(t){
+  var box = $("liveads"); if(!box) return;
+  if(!LIVE){
+    box.innerHTML = wrapLive("מודעות", "מה רץ להם כרגע",
+      '<div class="stat them num" style="margin-top:26px">'+num(val(t.m.ads))+"</div>"
+      + '<div class="statlbl">מודעות פעילות · נמדד '+esc(D.meta.dateHe)+"</div>");
+    return;
+  }
+  var mcp = await cap("mcp");
+  if(!mcp){
+    box.innerHTML = wrapLive("מודעות", "מהמדידה השבועית",
+      '<p class="body">רענון חי אינו זמין בתצוגה הזו. המספר בהשוואה הוא מהריצה האחרונה.</p>');
+    return;
+  }
+  if(!t.fbPageId){
+    box.innerHTML = wrapLive("מודעות", "אין מזהה עמוד",
+      '<p class="body">בלי מזהה עמוד פייסבוק אי אפשר לספור את המודעות הפעילות שלהם בזמן אמת.</p>');
+    return;
+  }
+  try{
+    var r = await adSearch(mcp, {
+      page_ids:[t.fbPageId], countries:["IL"], ad_active_status:"ACTIVE", limit:50,
+      advertiser_request:"בדיקת מתחרה — כמה מודעות פעילות יש להם עכשיו",
+      client_conversation_id:convId()});
+    var data = parsePayload(r && r.payload);
+    if(!data) throw new Error("no payload");
+    var live = data.estimated_total_count != null ? data.estimated_total_count : (data.ads||[]).length;
+    var weekly = val(t.m.ads), delta = (weekly != null) ? live - weekly : null;
+    var sub = delta === 0 ? "זהה למדידה השבועית."
+            : delta != null ? "המדידה השבועית הראתה "+num(weekly)+" — שינוי של "+sign(delta)+"."
+            : "";
+    var body = '<div class="stat them num" style="margin-top:26px">'+num(live)+"</div>"
+      + '<div class="statlbl">מודעות פעילות ברגע זה</div>'
+      + (sub ? '<p class="fine">'+esc(sub)+"</p>" : "");
+    var recent = (data.ads||[]).slice(0,3).filter(function(a){ return a.ad_creative_link_title; });
+    if(recent.length){
+      body += '<div class="cards" style="margin-top:44px">';
+      recent.forEach(function(a){
+        body += '<div class="card info"><div class="mk">◆</div><h4>'
+          + esc(a.ad_creative_link_title)+"</h4>"
+          + (a.ad_snapshot_url ? '<a href="'+esc(a.ad_snapshot_url)
+              + '" target="_blank" rel="noopener">צפייה במודעה ›</a>' : "")
+          + "</div>";
+      });
+      body += "</div>";
+    }
+    box.innerHTML = wrapLive("נבדק עכשיו", "מה רץ להם כרגע", body);
+  }catch(err){
+    box.innerHTML = wrapLive("מודעות", "הרענון החי נכשל",
+      '<p class="body">'+esc(errMsg(err))+" המספרים בהשוואה הם מהמדידה השבועית.</p>");
+  }
+}
+
+/* ══════════ סיווג ══════════ */
+var B2B = ["לקליניק","לקוסמטיקאי","למכון","לרופא","מערכת לייזר","מכשיר לייזר",
+  "רכישת מכשיר","החזר השקעה","טרייד אין","trade-in","מערכת ישנה","שדרוג מערכת",
+  "הדגמה","דמו","demo","כנס מקצועי","הכשרה מקצועית","מפיץ","יבואן","נציג בלעדי",
+  "משווק מורשה","אנשי מקצוע","בעלי קליניקות"];
+var B2C = ["מבצע","חבילת טיפולים","קבעי תור","קבעו תור","תור פנוי","₪","תשלומים",
+  "ללא התחייבות","שלחי לי הודעה","פגישת ייעוץ","סניפים","לתיאום תור","הנחה","מתנה"];
+var GRAY = ["יד שני","יד 2","משומש","second hand","מחודש"];
+function hasAny(t, list){
+  var low = (t||"").toLowerCase();
+  for(var i=0;i<list.length;i++) if(low.indexOf(list[i].toLowerCase()) > -1) return true;
+  return false;
+}
+function classifyAd(pageId, pageName, text){
+  var blob = (pageName||"")+" "+(text||"");
+  if(String(pageId) === String(D.client.fbPageId)) return {k:"client", why:"העמוד שלנו"};
+  for(var i=0;i<D.competitors.length;i++)
+    if(D.competitors[i].fbPageId && String(pageId) === String(D.competitors[i].fbPageId))
+      return {k:"competitor", why:"מתחרה מוכר"};
+  if(hasAny(blob, GRAY)) return {k:"gray_market", why:"שפת מכירת יד־שנייה"};
+  var b2b = hasAny(blob, B2B), b2c = hasAny(blob, B2C);
+  if(b2b && !b2c) return {k:"competitor", why:"פנייה B2B — מפיץ שלא ברשימה"};
+  if(b2b && b2c) return {k:"channel", why:"אותות מעורבים"};
+  return {k:"channel", why:"פנייה לצרכן קצה — קליניקה"};
+}
+
+/* ══════════ סריקת שוק ══════════ */
+function embeddedScan(term){
+  var sc = (D.scans||{})[term];
+  if(!sc) return null;
+  var pages = sc.pages.map(function(p){
+    return {name:p.name, n:p.n, kind:p.kind,
+            why: p.kind === "competitor" ? "מוכר ציוד לקליניקות"
+               : p.kind === "client" ? "העמוד שלנו"
+               : p.kind === "gray_market" ? "שפת מכירת יד־שנייה"
+               : "פנייה לצרכן קצה — קליניקה",
+            title:p.title, url:p.url};
+  });
+  return {total: sc.total, analyzed: sc.pages.length,
+          buckets: {client:sc.buckets.client||0, competitor:sc.buckets.competitor||0,
+                    channel:sc.buckets.channel||0, gray_market:sc.buckets.gray_market||0},
+          pages: pages, live:false, asOf: D.meta.dateHe};
+}
+
+async function runScan(term){
+  if(!term) return;
+  SCAN.innerHTML = topbar("סריקת שוק")
+    + '<div class="phero"><div class="mid">'
+    +   '<p class="eyebrow blue">סריקה חיה</p>'
+    +   '<h1 class="mega">'+esc(term)+"</h1></div></div>"
+    + '<div class="sect first" id="scanBody"><div class="mid">'
+    +   '<div class="loading"><span class="spin"></span>סורק מודעות פעילות בישראל…</div>'
+    + "</div></div>";
+  show("scan"); wireBack();
+
+  if(!LIVE){
+    var em = embeddedScan(term);
+    var b0 = $("scanBody").querySelector(".mid");
+    if(!em){
+      b0.innerHTML = '<h2 class="big">המונח הזה לא נסרק</h2>'
+        + '<p class="body">הסריקה מכסה את המונחים שנבדקו בריצה השבועית האחרונה.</p>';
+      reveal(SCAN); return;
+    }
+    renderScan(term, em); return;
+  }
+
+  var mcp = await cap("mcp");
+  var body = $("scanBody").querySelector(".mid");
+  if(!mcp){
+    body.innerHTML = '<h2 class="big">סריקה חיה אינה זמינה כאן</h2>'
+      + '<p class="body">הסריקה דורשת גישה למחבר Meta של הצופה. '
+      + "אפשר לפתוח את הדף מתוך claude.ai עם המחבר מחובר.</p>";
+    reveal(SCAN); return;
+  }
+  try{
+    var r = await adSearch(mcp, {
+      search_terms:term, countries:["IL"], ad_active_status:"ACTIVE", limit:50,
+      advertiser_request:"סריקת שוק — מי מפרסם על המוצר הזה בישראל",
+      client_conversation_id:convId()});
+    var data = parsePayload(r && r.payload);
+    if(!data) throw new Error("no payload");
+    renderScan(term, modelFromLive(data));
+  }catch(err){
+    body.innerHTML = '<h2 class="big">הסריקה נכשלה</h2><p class="body">'+esc(errMsg(err))+"</p>";
+    reveal(SCAN);
+  }
+}
+
+function modelFromLive(data){
+  var ads = data.ads || [];
+  var B = {client:0, competitor:0, channel:0, gray_market:0}, byPage = {};
+  ads.forEach(function(a){
+    var txt = [a.ad_creative_link_title, a.ad_creative_body, a.ad_creative_link_description]
+              .filter(Boolean).join(" ");
+    var c = classifyAd(a.page_id, a.page_name, txt);
+    B[c.k] = (B[c.k]||0) + 1;
+    var k = String(a.page_id);
+    if(!byPage[k]) byPage[k] = {name:a.page_name, n:0, kind:c.k, why:c.why,
+                                title:a.ad_creative_link_title, url:a.ad_snapshot_url};
+    byPage[k].n++;
+  });
+  return {
+    total: data.estimated_total_count != null ? data.estimated_total_count : ads.length,
+    analyzed: ads.length, buckets: B, live: true,
+    pages: Object.keys(byPage).map(function(k){ return byPage[k]; })
+                 .sort(function(a,b){ return b.n - a.n; })
+  };
+}
+
+function renderScan(term, M){
+  var B = M.buckets, total = M.total;
+  var LBL = {client:"אנחנו", competitor:"מתחרים", channel:"קליניקות", gray_market:"שוק אפור"};
+  var DSC = {client:"מודעות שלנו על המונח",
+             competitor:"מפיצים שמוכרים ציוד לקליניקות — התחרות האמיתית",
+             channel:"מוכרות טיפולים לצרכן. לקוחות, לא מתחרים",
+             gray_market:"מוכרי ציוד יד־שנייה"};
+
+  var h = topbar("סריקת שוק · "+term)
+    + '<div class="phero rev"><div class="mid">'
+    +   '<p class="eyebrow blue">'
+    +     (M.live ? "סריקה חיה · Meta Ad Library" : "Meta Ad Library · נסרק "+esc(M.asOf||""))
+    +   "</p>"
+    +   '<h1 class="mega">'+esc(term)+"</h1>"
+    +   '<div class="stat num" style="margin-top:34px">'+num(total)+"</div>"
+    +   '<div class="statlbl">מודעות פעילות בישראל'
+    +     (M.analyzed < total ? " · נותחו "+num(M.analyzed)+" מהן" : "")+"</div>"
+    + "</div></div>";
+
+  h += '<div class="sect grey"><div class="wide rev">'
+    + '<h2 class="big">מי עומד מאחוריהן</h2>'
+    + '<p class="body">הסיווג נקבע לפי קהל המודעה, לא לפי המותג שהיא מזכירה.</p>'
+    + '<div class="grid4" style="margin-top:44px">';
+  ["competitor","client","channel","gray_market"].forEach(function(k){
+    h += '<div class="tile '+k+'"><div class="v num">'+num(B[k])+"</div>"
+      + '<div class="k">'+esc(LBL[k])+'</div><div class="d">'+esc(DSC[k])+"</div></div>";
+  });
+  h += "</div></div></div>";
+
+  /* מסקנות */
+  var cards = "";
+  if(B.channel > 0 && B.competitor === 0)
+    cards += card("pos","✓","כל המפרסמים הם קליניקות",
+      "אין אף מפיץ מתחרה שמפרסם על המונח. "+B.channel+" מודעות של קליניקות מייצגות ביקוש, לא תחרות. "
+      + "כלי שסופר אותן כמתחרים היה מציג "+B.channel+" מתחרים במקום אפס.");
+  if(B.competitor > 0)
+    cards += card("neg","!",B.competitor+" מודעות של מפיצים מתחרים",
+      "אלה מוכרים ציוד לאותן קליניקות שאתם מוכרים להן. זו התחרות שצריך להסתכל עליה.");
+  if(B.client === 0 && (B.channel + B.competitor) > 0)
+    cards += card("warn","!","אנחנו לא מפרסמים על המונח",
+      "השוק פעיל סביב «"+term+"» ואין לנו נוכחות פרסומית עליו. שווה לבדוק אם זו החלטה או פער.");
+  else if(B.client > 0)
+    cards += card("info","◆","יש לנו "+B.client+" מודעות על המונח",
+      "נוכחות קיימת. אפשר להשוות את הכותרות שלנו לשאר השוק ברשימה למטה.");
+  if(B.gray_market)
+    cards += card("warn","!",B.gray_market+" מודעות שנראות כשוק אפור",
+      "מוכרי ציוד יד־שנייה. מכרסמים מכירות חדשות, לעיתים עם המותג שלכם. דורש אימות ידני.");
+  if(cards)
+    h += '<div class="sect"><div class="wide rev"><p class="eyebrow">קריאה</p>'
+      + '<h2 class="big">מה אפשר ללמוד מזה</h2>'
+      + '<div class="cards" style="margin-top:44px">'+cards+"</div></div></div>";
+
+  var pages = M.pages || [];
+  h += '<div class="sect grey"><div class="mid rev"><h2 class="big">כל המפרסמים</h2>'
+    + '<div class="rows" style="margin-top:38px">';
+  pages.slice(0,25).forEach(function(p){
+    var cls = p.kind === "competitor" ? "comp" : p.kind === "client" ? "client" : "";
+    h += '<div class="row '+cls+'"><div><div class="t">'+esc(p.name)+"</div>"
+      + '<div class="s">'+esc(LBL[p.kind]||p.kind)+" · "+esc(p.why)
+      + (p.title ? " · «"+esc(p.title)+"»" : "")
+      + "</div></div>"
+      + '<div class="q">'+num(p.n)
+      + (p.url ? ' <a href="'+esc(p.url)
+          + '" target="_blank" rel="noopener" style="font-size:14px;font-weight:400">›</a>' : "")
+      + "</div></div>";
+  });
+  h += "</div></div></div>";
+
+  h += '<div class="sect tight"><div class="mid rev"><p class="fine">'
+    + "המקור הוא Meta Ad Library, שמכסה מודעות בפייסבוק ובאינסטגרם. "
+    + (M.live ? "" : "הסריקה בוצעה בריצה השבועית ולא ברגע זה. ")
+    + "טיקטוק, יוטיוב ותוכן אורגני נאספים רק בריצה השבועית. "
+    + "מודעה שאינה מזכירה את המונח בטקסט לא תופיע כאן גם אם היא מקדמת את אותו מוצר."
+    + "</p></div></div>";
+
+  SCAN.innerHTML = h + foot();
+  show("scan"); wireBack();
+}
+function card(tone, mk, title, body){
+  return '<div class="card '+tone+'"><div class="mk">'+esc(mk)+"</div><h4>"
+    + esc(title)+"</h4><p>"+esc(body)+"</p></div>";
+}
+
+function foot(){
+  return "<footer>"+esc(D.meta.clientName)+" · מצפן תחרות · ריצה #"+D.meta.runId
+    + " · "+esc(D.meta.runAt)+"<br>"+D.logOk+" מתוך "+D.logTotal+" מקורות נאספו · "
+    + D.competitors.length+" מתחרים כשירים · "+D.excluded.length+" נפסלו</footer>";
+}
+
+renderHome();
+reveal(HOME);
+})();
+</script>
+</body>
+</html>
